@@ -1,0 +1,85 @@
+<html>
+<head>
+  <title>Event demo in JavaScript</title>
+</head>
+
+<style>
+
+   body {
+     background-color: brown;
+   }
+
+   .top {
+     position: absolute;
+     border: 3px solid black;
+     width: 5%;
+     top: 0%;
+     left: 50%;
+   }
+
+  .center {
+    position: absolute;
+    border: 3px solid black;
+    width: 10%;
+    top: 50%;
+    left: 50%;
+  }
+    
+    .bottom {
+      position: absolute;
+      border: 3px solid black;
+      width: 5%;
+      top: 90%;
+      left: 50%;
+    }
+    
+</style>
+
+<body>
+
+<h2>Event demo in Javascript</h2>
+
+<div class="top">
+   <p>click</p>
+</div>
+
+<div class="center">
+   <p>mouseover / mouseout</p>
+</div>
+
+<div class="bottom">
+   <p>dblclick</p>
+</div>
+
+<script>
+
+  var divtop = document.querySelector('.top');
+    
+    divtop.addEventListener('click', function() {
+      divtop.style.color = 'red';    
+    });
+
+  var divcenter = document.querySelector('.center');
+    
+    divcenter.addEventListener('mouseover', function() {
+      divcenter.style.color = 'blue';    
+    });
+    
+    divcenter.addEventListener('mouseout', function() {
+      divcenter.style.color = 'black';    
+    });
+
+
+
+  var divbottom = document.querySelector('.bottom');
+    
+    divbottom.addEventListener('dblclick', function() {
+      divbottom.style.color = 'green';    
+    });         
+
+</script>
+
+</body>
+
+</html>
+
